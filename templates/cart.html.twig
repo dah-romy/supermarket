@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block navbar %}
+{% include "common/navbar.html.twig" with { cart : ''} %}
+{% endblock %}
+
+{% block body %}
+<div class="container pt-5">
+  <div class="card">
+    <div class="card-header">
+      My cart
+    </div>
+
+    <div class="card-body">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in 0..10 %}
+              <tr>
+                <td>ID_{{i}}</td>
+                <td>PRODUCT_NAME_{{i}}</td>
+                <td>10{{i}}</td>
+              </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

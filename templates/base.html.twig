@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XYZ</title>
+  {% block style %}
+    {% include "common/style.html.twig" %}
+  {% endblock %}
+</head>
+<body>
+
+  {% block header %}
+    {% include "common/header.html.twig" %}
+  {% endblock %}
+
+  {% block navbar %}
+    {% include "common/navbar.html.twig" with { home : ''} %}
+  {% endblock %}
+  
+  {% block body %}
+  {% endblock %}
+  
+  {% block script %}
+    {% include "common/script.html.twig" %}
+  {% endblock %}
+</body>
+</html>
